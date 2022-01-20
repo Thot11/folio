@@ -1,0 +1,37 @@
+$colors: (
+  primary: #171F25,
+  secondary: #F5F6F7,
+  red: #DD0C18,
+  red2: #532F35,
+  green: #54BC22,
+  green2: #31D0AA,
+  green3: #40FF6A,
+  orange: #FFBE40,
+  dark: #25333D,
+  lightDark:#3E5566,
+  grey: #8D9296,
+  darkGrey: #5C6266,
+  secondaryText: #D9D8D8,
+  otherShitBorder: #999DA0,
+  againWeirdOtherColor: #F4F5F6,
+  anotherOneBitesTheDust: #4F4D50,
+  someLine: #5A6064,
+  blue: #0080FF,
+  newBlue: #6CC7FB,
+  backgroundCheckboxSometimes: #364E5F,
+  primary-300: #1C252E,
+  A1A7AC: #A1A7AC,
+  titleFooter: #9CA0A3,
+);
+
+@function color($name, $opacity: 1) {
+  $value: nth(map-get($colors, $name), 1);
+
+  @if $opacity != 1 {
+    @return unquote(
+      "rgba(#{red($value)}, #{green($value)}, #{blue($value)}, #{$opacity})"
+    );
+  } @else {
+    @return map-get($colors, $name);
+  }
+}

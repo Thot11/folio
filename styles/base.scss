@@ -1,0 +1,18 @@
+@import './font.scss';
+@import './color.scss';
+
+body {
+  color: color(secondary);
+  background-color: color(primary);
+  font-family: 'GothamPro';
+  width: 100%;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+.disable {
+  cursor: not-allowed !important;
+}
