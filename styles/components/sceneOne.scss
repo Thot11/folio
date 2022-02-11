@@ -1,0 +1,36 @@
+.sceneOne {
+  position: relative;
+  padding-top: 300px;
+
+  .lightBulbContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .lightBulb {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 1px solid white;
+    }
+
+    .switch {
+      width: 1px;
+      height: 50px;
+      background-color: white;
+      margin-top: 2px;
+      margin-left: 5px;
+    }
+  }
+
+  .playerContainer {
+    position: relative;
+    height: 140px;
+  }
+
+  .floor {
+    width: 100%;
+    height: 30px;
+    background-color: brown;
+  }
+}

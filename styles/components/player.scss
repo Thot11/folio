@@ -1,0 +1,144 @@
+.playerWrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  height: auto;
+
+  .playerHead {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: white;
+    transition-duration: 0.2s;
+
+  }
+
+  .playerBodyContainer {
+    display: flex;
+
+    .playerBody {
+      width: 30px;
+      height: 60px;
+      border: 2px solid white;
+      border-radius: 35% 35% 0 0;
+      background-color: white;
+      transition-duration: 0.2s;  
+    }
+  
+    .playerLeftArm, .playerRightArm {
+      width: 5px;
+      height: 45px;
+      margin-top: 5px;
+      margin-right: -2px;
+      border: 2px solid white;
+      border-radius: 50% 50% 0 0;
+      background-color: white;
+      transform: rotate(15deg);
+      transform-origin: 0 0;
+  
+    }
+  
+    .playerRightArm {
+      margin-left: -2px;
+      transform: rotate(-15deg);
+  
+    }
+
+  }
+
+  .playerLegsContainer {
+    display: flex;
+
+    .playerLeftLeg, .playerRightLeg {
+      width: 7px;
+      height: 60px;
+      transform-origin: 0 0;
+      background-color: white;
+  
+    }
+  
+    .playerRightLeg {
+      margin-left: 5px;
+    }
+  }
+}
+
+.playerToRight, .playerToLeft {
+  .playerHead {
+    width: 12px;
+    transition-duration: 0.2s;
+  }
+
+  .playerBodyContainer {
+    display: flex;
+
+    .playerBody {
+      width: 15px;
+      transition-duration: 0.2s;
+    }
+  
+    .playerLeftArm {
+      // display: none;
+      width: 3px;
+      margin-right: -2px;
+      transition-duration: 0.2s;
+      transform: rotate(15deg);      
+      animation-duration: 1s;
+      animation-name: walkRight;
+      animation-iteration-count: infinite;
+  
+    }
+  
+    .playerRightArm {
+      width: 3px;
+      margin-left: -2px;
+      transition-duration: 0.2s;
+      transform: rotate(-15deg);  
+      animation-duration: 1s;
+      animation-name: walkRight;
+      animation-iteration-count: infinite;
+      animation-delay: 0.5s;
+    }
+  }
+
+  .playerLegsContainer {
+    display: flex;
+
+    .playerLeftLeg {
+      width: 4px;
+      animation-duration: 1s;
+      animation-name: walkRight;
+      animation-iteration-count: infinite;
+      animation-delay: 0.5s;
+    }
+  
+    .playerRightLeg {
+      width: 4px;
+      margin-left: 2px;
+      animation-duration: 1s;
+      animation-name: walkRight;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes walkRight {
+      from {
+        transform: rotate(-10deg);
+      }
+      50% {
+        transform: rotate(20deg);
+      }
+      to {
+        transform: rotate(-10deg);
+      }
+    }
+  }
+}
